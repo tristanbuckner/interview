@@ -1,4 +1,4 @@
-name := "yamlLoaders"
+name := "aria-loan-service-challenge"
 
 scalaVersion := "2.11.8"
 

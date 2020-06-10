@@ -36,7 +36,7 @@ and a currently running experiment, as described in the following section.
  
 ## Experiment format
  
-An “experiment file” is a YAML definition of what offers to give what customers. Only one 
+An “experiment file” is a JSON definition of what offers to give what customers. Only one 
 experiment may be active at any given time. An experiment is active for a particular time 
 range, and specifies what offers to give customers with a particular score. The format of the 
 experiment file is a list, called experiments, where each item in the list has the following 
@@ -70,35 +70,54 @@ all customers should receive no offers.
 An example experiments file is: 
 
 ~~~~
-experiments: 
-  ­ name: Test high offers
-    startDate: 2020­05­01
-    endDate: 2020­05­31 
-    offers: 
-    ­ minScore: 0.9 
-      amount: 5000 
-      fee: 10 
-      term: 90 
-    ­ minScore: 0.5 
-      amount: 100 
-      fee: 10 
-      term: 90 
-  ­ name: Free for all 
-    startDate: 2020­06­01 
-    endDate: 2020­12­31 
-    offers: 
-    ­ minScore: 0.9 
-      amount: 1000 
-      fee: 5 
-      term: 90 
-    ­ minScore: 0.5 
-      amount: 100 
-      fee: 10 
-      term: 90 
-    ­ minScore: 0.0 
-      amount: 10 
-      fee: 10 
-      term: 30 
+{
+    "experiments": [
+        {
+            "name": "Test high offers",
+            "startDate": "2020-05-01",
+            "endDate": "2020-05-31",
+            "offers": [
+                {
+                    "minScore": 0.9,
+                    "amount": 5000,
+                    "fee": 10,
+                    "term": 90
+                },
+                {
+                "minScore": 0.5,
+                "amount": 100,
+                "fee": 10,
+                "term": 90
+                }
+            ]
+        },
+        {
+            "name": "Free for all",
+            "startDate": "2020-06-01",
+            "endDate": "2099-12-31",
+            "offers": [
+                {
+                    "minScore": 0.9,
+                    "amount": 1000,
+                    "fee": 5,
+                    "term": 90
+                },
+                {
+                    "minScore": 0.5,
+                    "amount": 100,
+                    "fee": 10,
+                    "term": 90
+                },
+                {
+                    "minScore": 0.0,
+                    "amount": 10,
+                    "fee": 10,
+                    "term": 30
+                }
+            ]
+        }
+    ]
+}
 ~~~~
 
 In this case, from May 1st to May 31st, 2020, the first experiment (“Test high offers”) is 

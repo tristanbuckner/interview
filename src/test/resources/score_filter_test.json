@@ -1,0 +1,77 @@
+{
+  "experiments": [
+    {
+      "name": "Lots of offers",
+      "startDate": "2020-01-01",
+      "endDate": "2099-12-31",
+      "offers": [
+        {
+          "minScore": 1.0,
+          "amount": 1000,
+          "fee": 5,
+          "term": 90
+        },
+        {
+          "minScore": 0.9,
+          "amount": 1000,
+          "fee": 5,
+          "term": 90
+        },
+        {
+          "minScore": 0.8,
+          "amount": 1000,
+          "fee": 5,
+          "term": 90
+        },
+        {
+          "minScore": 0.7,
+          "amount": 1000,
+          "fee": 5,
+          "term": 90
+        },
+        {
+          "minScore": 0.6,
+          "amount": 100,
+          "fee": 10,
+          "term": 90
+        },
+        {
+          "minScore": 0.5,
+          "amount": 10,
+          "fee": 10,
+          "term": 30
+        },
+        {
+          "minScore": 0.4,
+          "amount": 10,
+          "fee": 10,
+          "term": 30
+        },
+        {
+          "minScore": 0.3,
+          "amount": 10,
+          "fee": 10,
+          "term": 30
+        },
+        {
+          "minScore": 0.2,
+          "amount": 10,
+          "fee": 10,
+          "term": 30
+        },
+        {
+          "minScore": 0.1,
+          "amount": 10,
+          "fee": 10,
+          "term": 30
+        },
+        {
+          "minScore": 0.0,
+          "amount": 10,
+          "fee": 10,
+          "term": 30
+        }
+      ]
+    }
+  ]
+}

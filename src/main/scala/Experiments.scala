@@ -113,3 +113,5 @@ trait Validatable[T <: Validatable[T]] {
 }
 
 case class ValidationError(msg: String)
+
+case class ValidationException(errors: List[ValidationError]) extends Throwable

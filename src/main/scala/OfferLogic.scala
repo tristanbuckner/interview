@@ -2,7 +2,7 @@ import java.time.{Clock, LocalDate}
 
 import scala.annotation.tailrec
 
-class OfferLogic(experiments: IndexedSeq[Experiment]) {
+case class OfferLogic(experiments: IndexedSeq[Experiment]) {
 
     //Pre-sort the scores so we can use take instead of filter
     private val optimizedExperiments = experiments.map(e => e.copy(offers=e.offers.sortBy(_.minScore)))
